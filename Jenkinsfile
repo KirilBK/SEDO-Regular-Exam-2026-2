@@ -2,10 +2,10 @@ pipeline {
     agent any
 
     environment {
-        DOTNET_ROOT = '/root/.dotnet'
-        PATH = "/root/.dotnet:${env.PATH}"
-        DOTNET_SYSTEM_GLOBALIZATION_INVARIANT = 'true'
-    }
+    DOTNET_ROOT = '/opt/dotnet'
+    PATH = "/opt/dotnet:${env.PATH}"
+    DOTNET_SYSTEM_GLOBALIZATION_INVARIANT = 'true'
+}
 
     triggers {
         githubPush()
