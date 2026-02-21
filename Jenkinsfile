@@ -1,10 +1,5 @@
 pipeline {
-    agent {
-        docker {
-            image 'mcr.microsoft.com/dotnet/sdk:6.0'
-            args '--entrypoint=""'
-        }
-    }
+    agent any
 
     triggers {
         githubPush()
